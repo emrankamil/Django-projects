@@ -1,0 +1,44 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todoApp</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="{% static '/css/main.css'  %}" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    
+<div class="center-column">
+
+	<form method="POST" action="/">
+		{% csrf_token %}
+		{{form.title}}
+		<input class="btn btn-info" type="submit" name="Create Task">
+	</form>
+
+	<div class="todo-list">
+
+	{% for task in tasks %}
+		<div class="item-row">
+		
+			{% if task.complete == True %}
+
+			<span">{{task}}</span>
+            <li class="btn btn-sm btn-info">completed</li>
+			<a class="btn btn-sm btn-danger" href="{% url 'delete' task.id %}">Delete</a>
+			{% else %}
+			<span>{{task}}</span>
+            <a class="btn btn-sm btn-info" href="{% url 'update_task' task.id %}">Update</a>
+			<a class="btn btn-sm btn-danger" href="{% url 'delete' task.id %}">Delete</a>
+			{% endif %}
+		</div>
+	{% endfor %}
+	</div>
+</div>
+</body>
+</html>

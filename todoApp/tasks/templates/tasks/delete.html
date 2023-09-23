@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Confirm Task Deletion</title>
+    <style>
+        /* Additional CSS styles can be added here */
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .confirmation-box {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid #dcdcdc;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .confirmation-box h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .confirmation-box p {
+            margin-bottom: 20px;
+        }
+        .btn-danger {
+            background-color: #dc3545;
+            color: #fff;
+        }
+        .btn-danger:hover {
+            background-color: #c82333;
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+            color: #fff;
+        }
+        .btn-secondary:hover {
+            background-color: #545b62;
+        }
+    </style>
+</head>
+<body>
+    <div class="confirmation-box">
+        <h2>Confirm Task Deletion</h2>
+        <p>Are you sure you want to delete the task "{{ task.title }}"?</p>
+
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+
+        <a href="/" class="btn btn-secondary">Cancel</a>
+    </div>
+</body>
+</html>
