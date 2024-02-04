@@ -21,6 +21,8 @@ In this project, I built a basic Django application with a single app called "ba
 The repository structure is organized around Django's standard layout, including the "base" app where the core functionality resides. You won't find any fancy features or complex functionalities in this project. It's all about getting to grips with the basics of Django.
 
 Feel free to explore the code and see how I implemented Django's fundamental concepts in building this straightforward portfolio website. Whether you're a fellow learner or just curious about Django development, I hope this project serves as a helpful resource.
+![djangoWeb](https://github.com/emrankamil/Django-projects/assets/128908090/2a17fca5-23ad-4e0d-bf15-980606bbec76)
+
 
 #  To-Do App - Project 2
 My second project is a To-Do App that handles simple Create, Update, and Delete operations using Django. This project taught me everything about models, databases, and a lot more about Django.
@@ -36,4 +38,6 @@ User-Friendly Interface: The app provides an intuitive and user-friendly interfa
 
 # Project Structure
 The repository structure adheres to Django's best practices, with a dedicated app for managing tasks. While the project primarily focuses on essential CRUD (Create, Read, Update, Delete) operations, it provides valuable insights into Django's powerful capabilities in building web applications.
+![djangoToDoApp](https://github.com/emrankamil/Django-projects/assets/128908090/ac3b86de-b111-4974-b369-9d8724d9de7a)
+
 
